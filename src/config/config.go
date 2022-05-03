@@ -3,25 +3,22 @@ package config
 import (
 	"log"
 	"os"
-	"strconv"
 
 	"github.com/joho/godotenv"
 )
 
 var (
-	PORT = 0
+	PORT = "7000"
 )
 
-func LoadEnvVars() {
-
-	var err error
+func init() {
 
 	if err := godotenv.Load(); err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 
-	PORT, err = strconv.Atoi(os.Getenv("PORT"))
-	if err != nil {
-		PORT = 6000
+	if p := os.Getenv("PORT"); p != "" {
+		PORT = p
 	}
+
 }

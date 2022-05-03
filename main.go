@@ -12,10 +12,8 @@ func main() {
 
 	r := router.GenerateRouter()
 
-	config.LoadEnvVars()
+	fmt.Printf("Servidor rodando na porta %s", config.PORT)
 
-	fmt.Printf("Servidor rodando na porta %d", config.PORT)
-
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.PORT), r))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", config.PORT), r))
 
 }

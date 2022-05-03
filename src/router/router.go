@@ -7,7 +7,5 @@ import (
 )
 
 func GenerateRouter() *mux.Router {
-	r := mux.NewRouter()
-
-	return routes.InjectRoutes(r)
+	return routes.InjectRoutes(mux.NewRouter())
 }
