@@ -5,8 +5,8 @@ Resources:
       Properties:
         Name: "function-test"
         Alias: "my-alias"
-        CurrentVersion: "2"
-        TargetVersion: "3"
+        CurrentVersion: "3"
+        TargetVersion: "4"
 #Hooks:
 #  - BeforeAllowTraffic: "LambdaFunctionToValidateBeforeTrafficShift"
 #  - AfterAllowTraffic: "LambdaFunctionToValidateAfterTrafficShift"
